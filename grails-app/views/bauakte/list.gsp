@@ -20,6 +20,11 @@
 		</div>
 		 --%>
 		
+		<div id="NuovaRic" style="display:${bauakteInstanceList.asBoolean() == false ? 'none' : 'block'}">
+		<a href="#" onclick="javascript:document.getElementById('InputForm').style.display='block';document.getElementById('NuovaRic').style.display='none'";>Esegui nuova ricerca</a>
+		</div>
+		
+		<div id="InputForm" style="display:${bauakteInstanceList.asBoolean() == false ? 'block' : 'none'}">
 		<g:form  name="queryForm"  method="post" action="list">
 			<fieldset class="embedded">
 				<g:render template="queryForm"/>
@@ -33,6 +38,7 @@
 
 			</fieldset>
 		</g:form>
+		</div>
 		
 		<div id="list-bauakte" class="content scaffold-list" role="main">
 			<h1><g:message code="bauakte.list.label" args="[entityName]" /></h1>
