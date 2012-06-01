@@ -11,14 +11,14 @@ class DetailPers {
          table 'DETAIL_PERS'
          // version is set to false, because this isn't available by default for legacy databases
          version false
-		 bauAkt column: 'ba_Id'
-		 id column:'id'
-		 sortingName formula: "CONCAT(kennung_Id,antragsteller)"		 
+	 bauAkt column: 'ba_Id'
+	 id column:'id'
+	 sortingName formula: "CONCAT(kennung_Id,antragsteller)"		 
     }
 	
-	static belongsTo = [bauAkt:Bauakte]
-	
-	String sortingName		  
+    static belongsTo = [bauAkt:Bauakte]
+    
+    String sortingName		  
     String antragsteller
     String beschreibungDe
     String beschreibungIt
@@ -28,9 +28,9 @@ class DetailPers {
     String firmenbezeichnungDe
     String firmenbezeichnungIt
     Long baId
-	Long kennungId
-	String professioneDe
-	String professioneIt
+    Long kennungId
+    String professioneDe
+    String professioneIt
 
     String toString() {
         return "${antragsteller}" 

@@ -11,11 +11,11 @@ class DetailIndirizzo {
          table 'DETAIL_INDIRIZZO'
          // version is set to false, because this isn't available by default for legacy databases
          version false
-		 bauAkt column: 'ba_Id'
-		 id column:'id'
+	 bauAkt column: 'ba_Id'
+	 id column:'id'
     }
 	
-	static belongsTo = [bauAkt:Bauakte]
+    static belongsTo = [bauAkt:Bauakte]
 	
     String indirizzoDe
     String indirizzoIt
@@ -28,7 +28,7 @@ class DetailIndirizzo {
     String ncivbarr
     String ncivscala
     Long baId
-	Long cviacodi
+    Long cviacodi
 
     static constraints = {
         indirizzoDe(size: 0..148)

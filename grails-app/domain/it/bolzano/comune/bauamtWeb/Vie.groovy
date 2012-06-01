@@ -17,9 +17,9 @@ class Vie {
 	String descrDe
 
     static constraints = {
-		id()
+	id()
         descrIt(size: 0..50)
-		descrDe(size: 0..50)
+	descrDe(size: 0..50)
     }
     String toString() {
         return "${descrIt}" 

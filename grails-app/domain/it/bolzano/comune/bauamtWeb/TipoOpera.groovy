@@ -29,6 +29,7 @@ class TipoOpera {
         tipoIntervento(nullable: true)
         idVerwaltungsakt(nullable: true, size: 0..10)
     }
+    
     String toString() {
         return "${beschreibungIt}" 
     }

@@ -14,12 +14,12 @@ class Sitzungen {
 	static hasMany = [bauakteSitzungen: BauakteSitzungen]
 	
 	static mapping = {
-		table 'SITZUNGEN'
-		// version is set to false, because this isn't available by default for legacy databases
-		version false
-		id column:'ID'
-		sort sitzDatum:"desc"	
-		bauakteSitzungen sort:'orderbauakt'
+            table 'SITZUNGEN'
+            // version is set to false, because this isn't available by default for legacy databases
+            version false
+            id column:'ID'
+            sort sitzDatum:"desc"	
+            bauakteSitzungen sort:'orderbauakt'
     }
 
     String toString() {
