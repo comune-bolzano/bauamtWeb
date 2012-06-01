@@ -1,0 +1,206 @@
+/* STRUCTURE
+----------------------------------------------- */
+
+a:focus, a:active {color:black; background-color: #ffffcc;}
+
+A:hover {color:#00646e;background-color: transparent;} 
+
+A.selectedLink:link {color:#00646e;background-color: transparent;} 
+A.selectedLink:active {color:#00646e;background-color: transparent;} 
+A.selectedLink:visited {color:#00646e;background-color: transparent;} 
+A.selectedLink:hover {color:#00646e;background-color: transparent;} 
+
+A.selectedLinkBold:link {color:#00646e;background-color: transparent;} 
+A.selectedLinkBold:active {color:#00646e;background-color: transparent;} 
+A.selectedLinkBold:visited {color:#00646e;background-color: transparent;} 
+A.selectedLinkBold:hover {color:#00646e;background-color: transparent;} 
+
+#mainCenterContext h2 a{color:#00646e;background-color: transparent;}
+
+/* headings */
+
+#mainCenterEvents h2{color:#00646e;}
+#mainCenterNews h2{color:#00646e;}
+#mainCenterCS h2{color:#00646e;}
+#mainCenterContext h2{color:#00646e;}
+.mainLeftMenuEach h2{color:#00646e;}
+.mainLeftMenuEachEvent h2{color:#00646e;}
+
+#mainCenterContext .mainCenterContextTabella h3 a:hover {color:#00646e;}
+#mainCenterContext div.schemaBox h3 {color:#00646e;}
+
+.listBox h4, .listBoxDoc h4, .listBoxVideo h4 {color:#00646e;}
+
+/* Some generic styles */
+
+
+/* immagini */
+
+
+
+/* TEXT
+----------------------------------------------- */
+.testoColored {color: #00646e;}
+
+/* UL LISTS
+----------------------------------------------- */
+#headerMenu li a{
+	background:#00646e;
+	border-left: 1px solid #00646e;
+	border-right: 1px solid #00646e;
+}
+
+#headerMenu li a:hover{
+	color:#00646e;
+	border: 1px solid #00646e;
+}
+
+#headerMenu li a.selected{
+	color:#00646e;
+	border: 1px solid #00646e;
+}
+
+/*#headerMenu li a:focus, #headerMenu li a:active {color:#00646e;}*/
+
+.mainLeftMenuEach02 ul { 
+	color:#00646e;
+}
+
+.mainLeftMenuEach02 li.firstLev a{ 
+	/*color:#00646e;*/
+}
+
+.mainRightMenuEach02 ul { 
+	color:#00646e;
+}
+
+
+#mainCenterCS ul { 
+	color:#00646e;
+}
+
+.listBox ul, .listBoxDoc ul{
+	color:#00646e;
+}
+
+.mainLeftMenuEachContext ul { 
+	color:#00646e;
+}
+
+.mainLeftMenuEachContext li.titleMenu a{
+	color:#00646e;
+	background-color: transparent;
+}
+
+.mainLeftMenuEachContext li.firstLev a{ 
+	color:#00646e;
+	background-color: transparent;
+}
+
+.mainCenterMenuEach ul { 
+	color:#00646e;
+}
+
+.mainCenterMenuEach li { 
+	color:#00646e;
+}
+
+/* FORM
+----------------------------------------------- */
+input.searchButtonColored {
+	background:#00646e;
+}
+
+input.searchButtonColored02 {
+	background:#00646e;
+}
+
+/* MAIN LAYOUT
+----------------------------------------------- */
+
+
+/* HEADER
+-------------------------- */
+div#headerLogo {
+	background-image: url(../images/skyline_turquoise.gif);
+}
+
+div#headerMenu02 {
+	background:#00646e;
+}
+
+
+/* MAIN
+-------------------------- */
+
+
+/* MAIN - LEFT
+-------------------- */
+
+
+/* MAIN - CENTER
+-------------------- */
+div#mainCenter {
+}
+
+div#mainCenterEvents {
+}
+
+div#mainCenterNews {
+}
+
+div#mainCenterBig {
+	/*background-image: url(/images/corner_green.gif);*/
+}
+
+div#mainCenterBigEvents {
+	/*background-image: url(/images/corner_green.gif);*/
+}
+
+div#mainCenterPoll {
+	/*background-image: url(/images/corner_green.gif);*/ /* corner with white bg */
+	background-image: url(../images/corner_turquoise_bg.gif); /* corner with grey bg */
+}
+
+div#mainCenterPoll02 {
+	/*background-image: url(/images/corner_green.gif);*/ /* corner with white bg */
+	background-image: url(../images/corner_turquoise_bg.gif); /* corner with grey bg */
+}
+
+div#mainPrint {
+	/*background-image: url(/images/corner_green.gif);*/ /* corner with white bg */
+	background-image: url(../images/corner_turquoise_bg.gif); /* corner with grey bg */
+}
+
+div#mainCenterGoTop{
+	/*background-image: url(/images/corner_green_bottom.gif);*/  /* corner with white bg */
+	background-image: url(../images/corner_turquoise_bg_bottom.gif); /* corner with grey bg */
+}           
+
+div#mainCenterGoTop02{
+	/*background-image: url(/images/corner_green_bottom.gif);*/  /* corner with white bg */
+	background-image: url(../images/corner_turquoise_bg_bottom.gif); /* corner with grey bg */
+}       
+
+div#mainCenterGoTop03{
+	/*background-image: url(/images/corner_green_bottom.gif);*/  /* corner with white bg */
+	background-image: url(../images/corner_turquoise_bg_bottom.gif); /* corner with grey bg */
+}  
+
+div#mainCenterGoTopContext{
+	/*background-image: url(/images/corner_green_bottom.gif);*/  /* corner with white bg */
+	background-image: url(../images/corner_turquoise_bg_bottom.gif); /* corner with grey bg */
+}
+/********* schede in contextBox *********/
+th.bg_scheda {color:#00646e;}
+
+
+/* MAIN - RIGHT
+-------------------- */
+
+
+/* FOOTER
+-------------------------- */
+div#footerCredits{
+	background:#00646e;
+}

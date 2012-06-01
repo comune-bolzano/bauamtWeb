@@ -1,0 +1,1769 @@
+/* STRUCTURE
+----------------------------------------------- */
+
+html,body{margin: 0;padding:0;background-color:#ffffff;}
+
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-align:center;
+	font-size:75%;
+	background-color: #FFFFFF;
+}
+
+/* in order to hide the skip navigation link */
+a.skip {position: absolute; left: -1000em; width: 20em;}
+
+/* in order to position the go to the top link */
+a.goTop {
+	position: absolute; 
+	left: 0; 
+	width: 1em;
+	visibility:hidden;
+}
+
+/*a:focus, a:active {color: white; background-color: blue;}*/
+
+
+a.none { TEXT-DECORATION: none;color:#000; } 
+A:active { text-decoration: none;color:#000;} 
+A:visited { TEXT-DECORATION: none;color:#000;} 
+A:hover { TEXT-DECORATION: underline;} 
+
+A.selectedLinkBold:link {font-weight:bold;} 
+A.selectedLinkBold:active {font-weight:bold;} 
+A.selectedLinkBold:visited {font-weight:bold;} 
+A.selectedLinkBold:hover {font-weight:bold;} 
+
+div.bodyBox a:link {color:blue;background-color:transparent;text-decoration: underline;}
+div.bodyBox a:active {color:blue;background-color:transparent;text-decoration: underline;}
+div.bodyBox a:visited {color:blue;background-color:transparent;text-decoration: underline;}
+div.bodyBox a:hover {color:blue;background-color:transparent;text-decoration: underline;}
+
+div.schemaBox a:link {color:blue;background-color:transparent;text-decoration: underline;}
+div.schemaBox a:active {color:blue;background-color:transparent;text-decoration: underline;}
+div.schemaBox a:visited {color:blue;background-color:transparent;text-decoration: underline;}
+div.schemaBox a:hover {color:blue;background-color:transparent;text-decoration: underline;}
+
+div.contextCS a:link {color:blue;background-color:transparent;text-decoration: underline;}
+div.contextCS a:active {color:blue;background-color:transparent;text-decoration: underline;}
+div.contextCS a:visited {color:blue;background-color:transparent;text-decoration: underline;}
+div.contextCS a:hover {color:blue;background-color:transparent;text-decoration: underline;}
+
+a.blueLink:link {color:blue;background-color:transparent;text-decoration: underline;}
+a.blueLink:active {color:blue;background-color:transparent;text-decoration: underline;}
+a.blueLink:visited {color:blue;background-color:transparent;text-decoration: underline;}
+a.blueLink:hover {color:blue;background-color:transparent;text-decoration: underline;}
+
+div.mainCenterContextTabella a:link {color:blue;background-color:transparent;text-decoration: underline;}
+div.mainCenterContextTabella a:active {color:blue;background-color:transparent;text-decoration: underline;}
+div.mainCenterContextTabella a:visited {color:blue;background-color:transparent;text-decoration: underline;}
+div.mainCenterContextTabella a:hover {color:blue;background-color:transparent;text-decoration: underline;}
+
+div.mainCenterContextTabellaRic a:link {color:blue;background-color:transparent;}
+div.mainCenterContextTabellaRic a:active {color:blue;background-color:transparent;}
+div.mainCenterContextTabellaRic a:visited {color:blue;background-color:transparent;}
+div.mainCenterContextTabellaRic a:hover {color:blue;background-color:transparent;}
+
+/* Some generic styles */
+
+.leftDiv{
+	float:left;
+}
+
+.rightDiv{
+	float:right;
+}
+
+div.end{
+	clear:both;
+}
+
+div.endSmall{
+	clear:both;
+	font-size:0.1em;
+}
+
+div.endHight{
+	height:0.4em;
+	clear:both;
+}
+
+.textright {
+	text-align: right;
+}
+
+.textcenter {
+	text-align: center;
+}
+
+.upper {
+	text-transform:uppercase;
+}
+
+.leftDivWidth{
+	float:left;
+	width:30%;
+}
+
+.rightDivWidth{
+	float:right;
+	width:30%;
+	text-align: right;
+}
+.centerDiv{
+	float:left;
+	width:35%;
+	text-align:center;
+}
+
+
+.centerDiv100{
+	 width:100%;
+	 text-align:center;
+}
+
+.leftDivPath{
+	float:left;
+	width:90%
+}
+
+.spacer {
+	padding:0.3em 0;
+}
+
+.spacerBig {
+	padding:1em 0;
+}
+
+.spacerBg {
+	padding:0.3em 0;
+	background:#fff;
+}
+
+.spacerBgSmaller {
+	padding:0.25em 0;
+	background:#fff;
+}
+
+.paddingTop {
+	padding-top:1em;
+}
+
+.rightDivPad{
+	float:right;
+	padding-right:0.4em;
+}
+
+.hidden {
+	display: none;
+}
+
+
+
+
+/* headings */
+h1 {font-size: 100%;margin:0;padding: 0;}
+h2 {font-size: 100%;margin:0;padding: 0;}
+h3 {font-size: 100%;margin:0;padding: 0;}
+h4 {font-size: 100%;margin:0;padding: 0;font-weight:normal;}
+
+#mainCenterEvents h2{padding-bottom:1em;font-size:120%;}
+#mainCenterNews h2{padding-bottom:1em;font-size:120%;}
+#mainCenterCS h2{padding-bottom:0.5em;font-size:120%;}
+#mainCenterContext h2{padding-bottom:1em;font-size:120%;}
+.mainLeftMenuEach h2{padding-bottom:0.5em;padding-left:0.8em;}
+.mainLeftMenuEachEvent h2{padding-bottom:0.5em;padding-left:0.8em;}
+
+#mainCenterContext h3{padding-bottom:1em;font-weight:normal;}
+#neutralDiv h3 {padding:0 0 1em 0;font-weight:normal;}
+#mainCenterContext .mainCenterContextTabella h3 {padding-bottom:0;font-weight:bold;}
+#mainCenterContext .mainCenterContextTabellaRic h3 {padding-bottom:0;font-weight:bold;}
+#mainCenterContext .mainCenterContextTabellaSearch h3 {display:inline;font-weight:bold;}
+#mainCenterContext .mainCenterContextTabella h3 a {color:#000;}
+#mainCenterContext .mainCenterContextTabella .rightDivEvents h3 a {color:blue;text-decoration:underline;} /* added for links in html fields in searchresult_tabella_acc.xsl */
+#mainCenterContext .mainCenterContextTabellaRic h3 a {color:#000;}
+#mainCenterContext div.schemaBox h3 {padding-top:0.3em;padding-bottom:0;font-weight:bold;} 
+#formNewsletter h3{padding-bottom:1em;font-weight:bold;}
+#mainCenterCS h3 {font-weight:normal;margin:1em 0;}
+#mainCenterCS .mainCenterNews01 h3 {margin:0;}
+
+.listBox h4, .listBoxDoc h4 {margin:0 0 0.5em 0;font-weight:bold;}
+.listBox h4.noBreak {display: inline;}
+#neutralDiv h4 {padding:0 0 1em 0;font-weight:bold;}
+.bodyBox h4 {
+	font-weight:bold;
+}  
+
+#marginForm01 fieldset h5 {
+	position: relative;
+	clear: both;
+	font-size:100%;
+}
+
+/* immagini */
+img {border: 0}
+
+.imgfloat {
+  float:left;
+  margin: 1.5em 2em 1em 0;
+}
+.imgfloatSmall {
+	float:left;
+	margin: 0 1em 0 0;
+}
+
+.imgborder {
+  /*border:solid 1px #f5f4f4;*/
+}
+
+.imgborderfloat {
+  float:left;
+  /*border:solid 1px #f5f4f4;*/
+  margin: 1.5em 2em 1em 0;
+} 
+
+.imgSpace {
+  /*border:solid 1px #f5f4f4;*/
+  margin: 0 1.5em 0 0;
+}
+        
+#headerServizio p {margin:0;padding:0 0.4em;}
+
+
+
+
+/* TEXT
+----------------------------------------------- */
+.testo {color: #000;font-weight:normal;}   
+.testoBold {color: #000;font-weight:bold;}
+.testoSelected {}
+
+
+
+
+/* UL LISTS
+----------------------------------------------- */
+#headerServizio ul { 
+	margin:0;
+	padding: 0;
+	list-style: none;
+	display: inline;
+}
+
+#headerServizio li{
+	padding: 0 0 0 0.5em;
+	display: inline;
+}
+
+.headerServizio02 ul { 
+	margin:0;
+	padding: 0;
+	list-style: none;
+	display: inline;
+}
+
+.headerServizio02 li{
+	padding: 0 0.5em 0 0;
+	display: inline;
+	font-weight:bold;
+}
+
+.rightDivHeader ul { 
+	margin:0;
+	padding: 0;
+	list-style: none;
+	display: inline;
+}
+
+.rightDivHeader li{
+	padding: 0 0.7em 0 0;
+	display: inline;
+	font-weight:normal;
+}
+
+#headerMenu ul { 
+	margin:0;
+	padding: 0;
+	list-style: none;
+	display: inline;
+}
+
+#headerMenu li{
+	display: inline;
+}
+
+#headerMenu li a{
+	padding: 0.3em 0.3em;
+	color:#fff;
+	font-weight:bold;
+}
+
+#headerMenu li a:focus, #headerMenu li a:active {
+	background-color: #ffffcc;
+	color:black;
+}
+
+#headerMenu li a:hover{
+	padding: 0.3em 0.3em;
+	background:#fff;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+
+#headerMenu li a.selected{
+	padding: 0.3em 0.3em;
+	background:#fff;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+#headerPath ul { 
+	margin:0;
+	padding: 0;
+	list-style: none;
+	display: inline;
+}
+
+#headerPath li {
+	padding: 0.4em 0.2em;
+	display: inline;
+	line-height:1.3em;
+}
+
+#headerPath li.selected {
+	font-weight:bold;
+}
+
+#headerPath li a {
+	padding: 0 0 0 0.3em;
+}
+
+#headerPath li.first a {
+	padding: 0;
+}
+
+
+.mainLeftMenuEach02 ul { 
+	margin:0;
+	padding: 0 0 0.3em 0;
+	list-style: disc outside;
+}
+
+.mainLeftMenuEach02 li { 
+	margin:0;
+	padding: 0.5em 0;
+}
+
+.mainLeftMenuEach02 li.firstLev { 
+	list-style: none;
+}
+
+.mainLeftMenuEach02 li.firstLev a{ 
+	font-weight:bold;
+}
+
+.mainLeftMenuEach02 li.secondLev { 
+	list-style: none;
+	padding: 0 0 0 2.5em;
+}
+
+.mainLeftMenuEach02 li.thirdLev { 
+	list-style: none;
+	padding: 0 0 0 3.5em;
+}
+
+.mainRightMenuEach02 ul { 
+	margin:0;
+	padding: 0;
+	list-style: disc outside;
+}
+
+.mainRightMenuEach02 li { 
+	margin:0;
+	padding: 0.5em 0;
+}
+
+
+.mainCenterCS01 ul { 
+	margin:0;
+	padding: 0 0 0 2.5em;
+	list-style: disc outside;
+}
+
+.mainCenterCS01 li { 
+	margin:0;
+	padding: 0.25em 0;
+	
+}
+
+
+.mainLeftMenuEachContext ul { 
+	margin:0;
+	padding: 0;
+}
+
+.mainLeftMenuEachContext li { 
+	margin:0;
+	padding: 0 0 0.9em 0;
+	list-style: disc outside;
+}
+
+.mainLeftMenuEachContext li.titleMenu{
+	margin:0 0 0 -1.3em;
+	padding: 0.5em 0 0.7em 0;
+	list-style: none;
+	font-weight:bold;
+}
+
+.mainLeftMenuEachContext li.firstLev { 
+
+}
+
+.mainLeftMenuEachContext li.firstLev a{ 
+	font-weight:bold;
+}
+
+.mainLeftMenuEachContext li.secondLev { 
+	position:relative;
+	left:1em;
+}
+
+.mainLeftMenuEachContext li.thirdLev { 
+	position:relative;
+	left:2em;
+}
+
+.mainLeftMenuEachContext li.fourthLev { 
+	position:relative;
+	left:3em;
+}
+
+.mainLeftMenuEachContext li.otherwiseLev { 
+	position:relative;
+	left:4em;
+}
+
+
+.mainCenterMenuEach ul { 
+	margin:0;
+	padding: 0;
+	list-style: disc outside;
+}
+
+.mainCenterMenuEach li { 
+	margin:0;
+	padding: 0 0 0.9em 0;
+}
+
+.mainCenterMenuEach li.secondLev { 
+	position:relative;
+	left:1em;
+}
+
+.mainCenterMenuEach li.thirdLev { 
+	position:relative;
+	left:2em;
+}
+
+.mainCenterMenuEach li.fourthLev { 
+	position:relative;
+	left:3em;
+}
+
+.mainCenterMenuEach li.otherwiseLev { 
+	position:relative;
+	left:4em;
+}
+
+
+
+#map ul { 
+	margin:0 0 0 1.5em;
+	padding: 0;
+}
+
+#map ul li { 
+	margin:0;
+	padding: 0 0 0.9em 0;
+	list-style: disc outside;
+}
+
+#map ul li.titleMenu{
+	margin:0 0 0 -1.3em;
+	padding: 0.5em 0 0.7em 0;
+	list-style: none;
+	font-weight:bold;
+}
+
+#map ul li.firstLev { 
+
+}
+
+#map ul li.firstLev a{ 
+	font-weight:bold;
+}
+
+#map ul li.secondLev { 
+	position:relative;
+	left:1em;
+}
+
+#map ul li.thirdLev { 
+	position:relative;
+	left:2em;
+}
+
+#map ul li.fourthLev { 
+	position:relative;
+	left:3em;
+}
+
+#map ul li.otherwiseLev { 
+	position:relative;
+	left:4em;
+}
+
+
+
+
+.resultSearch ul { 
+	margin:0;
+	padding: 0;
+	list-style: disc outside;
+}
+
+.resultSearch li { 
+	margin:0;
+	padding: 0 0 0.9em 0;
+}
+
+.resultSearch{
+	padding:1em 1em 8em 1.4em;
+}
+
+
+#welcome ul { 
+	margin:0;
+	padding: 0;
+	list-style: none;
+	display: inline;
+}
+
+#welcome li{
+	padding:0 0 0 0.5em;
+	display: inline;
+	font-size:130%;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-weight:bold;
+}
+
+#welcome li a {
+	text-decoration:none;
+	color:#565656;
+	background-color:white;
+}
+
+#welcome li a:hover {
+	color:black;
+	background-color:white;
+}
+
+#welcome li img {
+	vertical-align:middle;
+}
+
+/*** sorelle, associazioni ***/
+.listBox ul, .listBoxDoc ul{
+	margin:0;
+	padding: 0 0 0 1.3em;
+	list-style: disc outside;
+}
+
+.listBox li{
+	margin:0 0 0.6em 0;
+	padding: 0;
+	border-bottom: 0;
+}
+
+.listBoxDoc li{
+	margin:0 0 1.6em 0;
+	padding: 0;
+	border-bottom: 0;
+}
+
+/*** END docs, sorelle, associazioni ***/
+
+
+
+.schemaBox ul{
+	margin:0;
+	padding: 0;
+	list-style: disc outside;
+}
+.schemaBox li{
+	margin:0;
+	padding: 0 0 0.9em 0;
+	border-bottom: 0;
+}
+
+td.bg_scheda ul {
+	margin:0 0 0 1.4em;
+}
+
+.schemaBox2 ul{
+	margin:0 0 0 1.4em;
+	padding: 0;
+	list-style: disc outside;
+}
+.schemaBox2 li{
+	margin:0;
+	padding: 0;
+	border-bottom: 0;
+}
+
+#footerPath ul { 
+	margin:0;
+	padding: 0;
+	list-style: none;
+}
+
+#footerPath li{
+	padding: 0.4em 0.2em;
+	display: inline;
+	line-height:1.3em;
+}
+
+#footerPath li.selected{
+	font-weight:bold;
+}
+
+#footerPath li a{
+	padding: 0 0.1em 0 0.3em;
+}
+
+#footerPath li.first a {
+	padding: 0;
+}
+
+
+#footerCredits ul { 
+	margin:0;
+	padding: 0;
+	list-style: none;
+}
+
+#footerCredits li{
+	display: inline;
+}
+
+
+#footerCredits li a:focus, #footerCredits li a:active{
+	color:black;
+	background-color: #ffffff;
+}
+
+#footerCredits li a, #footerCredits li a:hover {
+	color:#fff;
+	background-color: transparent;
+}
+
+
+/* FORM
+----------------------------------------------- */
+form {margin: 0;display:inline;}
+
+form p {display:inline;}
+
+/* input {
+	margin: 0;
+	padding:0;
+	width:13em;
+	border: 1px solid #000;
+} */
+
+input.searchtext {
+	padding:0 0 0 0.2em;
+}
+
+
+input.searchButton{
+	border-style: none;
+	margin: 0;
+	padding:0;
+	background: transparent;
+    width:3em;
+	height:1.4em;
+	cursor:pointer;
+	color: #000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+input.searchButtonColored {
+	border: 1px solid #000;
+	margin: 0;
+	padding:0;
+	width:3.5em;
+	height:1.4em;
+	cursor:pointer;
+	color: #fff;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+
+input.searchButtonColored02 {
+	border: 1px solid #000;
+	margin: 0;
+	padding:0;
+	width:auto;
+	height:1.4em;
+	cursor:pointer;
+	color: #fff;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+
+/* NEWSLETTER
+---------------------- */
+
+#marginForm01 fieldset
+{
+	display: block;
+	border: 1px solid #a9a9a9;
+	padding:1.2em;
+	margin: 1.5em 0;
+}
+#marginForm01 fieldset.nomargin {
+	margin: 0 0 1em 0;
+}
+
+#marginForm01 fieldset legend
+{
+	font-weight:bold;
+	color: #000;
+}
+
+#marginForm01 fieldset div {
+	margin-bottom:0.5em;
+}
+
+#marginForm01 fieldset div.first {
+	margin-top:1em;
+}
+
+#marginForm01 fieldset label.labelBig{
+	position: relative;
+	float:left;
+	width:12em;
+	clear:both;
+}
+
+#marginForm01 fieldset label {
+	position: relative;
+	float:left;
+	width:8em;
+	clear:both;
+}
+
+
+#marginForm01 fieldset label>input {
+	position: relative;
+	float:right;
+}
+
+#marginForm01 fieldset div.radio label {
+	position: relative;
+	top: -1.5em;
+	left: 2em;
+	display: inline;
+	width: auto;
+}
+
+#marginForm01 fieldset div.radio input {
+	clear: both;
+	float: left;
+	width:1em;
+	border:0;
+}
+
+#marginForm01 fieldset textarea {
+	background:white;
+	border: 1px solid #000000;
+}
+
+#marginForm01 fieldset select {
+	margin: 0;
+	padding:0;
+	width:13em;
+	border: 1px solid #000;
+}
+
+#marginForm01 div.paragraph p {
+	display:block;
+}
+
+#marginForm01 div.paragraph p a {
+	color:blue;
+	text-decoration: underline;
+}
+
+
+/* SEGNALA / VOTA
+---------------------- */
+
+#marginForm01 #marginForm02 fieldset {
+	margin: 0 0 1.5em 0;
+}
+
+#marginForm01 #marginForm02 fieldset label {
+	width:14em;
+}
+
+#marginForm01 #marginForm02 fieldset textarea {
+	width:14em;
+}
+
+
+
+/* FORM EXTENDED SEARCH COMUNICATI
+-------------------------- */
+
+#mainCenterCS fieldset {
+	border:none;
+	margin:0 0 2em 0;
+	padding:0;
+}
+
+#mainCenterCS fieldset legend {
+	display:none;
+}
+
+#mainCenterCS input.searchButtonColored {
+	position:relative;
+	left:30%;
+}
+	
+
+#maskBox .leftDiv{
+	float:left;
+	width:30%;
+}
+
+#maskBox input {
+	width:15em;
+	border: 1px solid #000;
+}
+
+#maskBox select {
+	width:15em;
+}
+
+#maskBox .maskDate select {
+	width:auto;
+}
+
+#maskBox input.check {
+	margin-right:0.5em;
+	border:0;
+}
+
+#maskBox .leftDivMask label {
+	padding-left:1em;
+}
+
+.leftDivMaskNumbers{
+	float:left;
+	width:5%;
+}
+
+
+
+
+
+
+
+/* MAIN LAYOUT
+----------------------------------------------- */
+div#container{
+	width:98%; 
+	margin:0 auto;
+	background:#fff; /*#f5f4f4;*/
+}
+
+div#containerInside{
+	width:98%; 
+	margin:0 auto;
+	background:#fff; /*#f5f4f4;*/
+}
+
+div#containerPrint{
+	width:98%; 
+	margin:0 auto;
+	background:#fff;
+}
+
+
+/* HEADER
+-------------------------- */
+div#header {
+	text-align: left;
+	/*clear:both;*/
+	background:#fff;
+}
+
+div#headerLogo {
+	padding-top:1em;
+	background-position: right bottom;
+	background-repeat:no-repeat;
+	position: relative;
+}
+
+div#headerServizio {
+	padding:0.3em 0.4em 0.3em 0.3em;
+	background:#f5f4f4;
+	position: relative;
+}
+
+div#headerServizioLeft {
+	float:left;
+	position:relative;
+	left:39%;
+	/*top;*/
+	font-weight:bold;
+}
+
+div#headerServizioRight {
+	float:right;
+	position:relative;
+	text-align:right;
+}
+
+div.headerServizio02 {
+	background:#f5f4f4;
+	padding:0.3em;
+}
+
+
+div#headerServizio02 {
+	padding:0.3em;
+	background:#f5f4f4;
+	position: relative;
+}
+
+div#headerMenuContainer{
+	margin: 0 0 0.7em 0; /*margin: 0.7em 0;*/
+}
+
+div#headerMenu {
+	width:100%;
+	/*height:2em;*/
+	padding:0;
+	margin:0;
+	text-align:center;
+}
+
+
+div#headerMenu02 {
+	/*padding:0.1em 0;*/
+	padding:0;
+	line-height:2em;
+}
+
+
+div#headerPath {
+	padding:0.3em;
+	background:#f5f4f4;
+}
+
+.leftDivHeader {
+	float:left;
+	padding-left: 0.4em;
+	margin-top:0.4em;
+	background:#f5f4f4;
+}
+
+.rightDivHeader {
+	float:right;
+	background:#f5f4f4;
+}
+
+div.leftDivHeader p {
+	padding:0;
+	margin:0;
+}
+
+div.rightDivHeader p {
+	padding:0;
+	margin:0;
+}
+
+
+
+
+/* MAIN
+-------------------------- */
+div#main {
+	text-align: left;
+	height:100%;
+}
+
+div#mainCS {
+	text-align: left;
+	height:100%;
+}
+
+/* MAIN - LEFT
+-------------------- */
+div#mainLeft {
+	float:left;
+	width:22%;
+}
+
+div.mainLeftBanner {
+	padding:0.5em;
+	border-bottom:0.5em solid #fff;
+	background:#f5f4f4;
+	text-align:center;
+}
+
+div#mainLeftMenu {
+}
+
+div#mainLeftSorelle{
+}
+
+div.mainLeftMenuEach {
+	padding-top:0.5em;
+	border-bottom:0.5em solid #fff;
+	background:#f5f4f4;
+}
+
+div.mainLeftMenuEachEvent {
+	padding-top:0.5em;
+	border-bottom:0.5em solid #fff;
+	background:#f5f4f4;
+}
+
+div.mainLeftMenuEach02 {
+	padding:0 1em 0 2em;
+}
+
+.mainLeftMenuEachContext{
+	padding:0 1em 0 2em;
+}
+
+
+
+/* MAIN - CENTER
+-------------------- */
+div#mainCenter {
+	float:left;
+	width:55.9%;
+	background:#fff;
+	/*padding-top:2.5em;
+	background-position: 1% 0;
+	background-repeat:no-repeat;*/
+	overflow: hidden; /* NEW to fix IE Italics Float Bug */
+}
+
+
+div#mainCenterBig {
+	float:right;  /* it was left */
+	height:100%;
+	width:77.89%; /* IE 5.x only uses the first width declaration */
+	background:#fff;
+	/*background-position: 1% 0;
+	background-repeat:no-repeat;*/
+	voice-family: "\"}\""; /* box model hack by Tantek: IE 5.x stops here due to a CSS parsing bug */
+	voice-family: inherit;
+	width:77.99%; /* All conforming CSS user agents will see and use the second width declaration */
+	overflow: hidden; /* NEW to fix IE Italics Float Bug */
+}
+
+div#mainCenterBigEvents {
+	float:right;  /* it was left */
+	width:77.89%; /* IE 5.x only uses the first width declaration */
+	background:#fff;
+	/*background-position: 1% 0;
+	background-repeat:no-repeat;*/
+	voice-family: "\"}\""; /* box model hack by Tantek: IE 5.x stops here due to a CSS parsing bug */
+	voice-family: inherit;
+	width:77.99%; /* All conforming CSS user agents will see and use the second width declaration */
+}
+
+div#mainCenterEvents{
+	padding: 0 0 0 1em;
+}
+
+div.mainCenterEvents01{
+	padding-bottom:1em;
+}
+
+div.leftDivEvents {
+	float:left;
+	padding-right:1em;
+}
+
+div.rightDivEvents {
+	float:left;
+	padding-right:1em;
+}
+
+div.mainCenterEvents02{
+	padding-bottom:1em;
+}
+
+#mainCenterNews{
+	padding: 0 0 0 1em;
+	/*background-position: 1% 0;
+	background-repeat:no-repeat;*/
+}
+
+div.mainCenterNews01{
+	padding-bottom:1em;
+}
+
+div.leftDivNews {
+	float:left;
+	padding-right:1em;
+}
+
+div.rightDivNews {
+	float:left;
+	padding-right:1em;
+}
+
+div.mainCenterNews02{
+	padding-bottom:1em;
+	padding-right:1em;
+}
+
+
+#mainCenterCS{
+	padding: 0 1em 1em 1em;
+	/*background-position: 1% 0;
+	background-repeat:no-repeat;*/
+}
+
+div.mainCenterCS01{
+	padding-bottom:0.5em;
+}
+
+div#maskBox {
+	padding-top:1em;
+}
+
+div#mainCenterPoll {
+	padding: 0.5em 0.5em 0 0;
+	margin-left:0.5em;
+	text-align:right;
+	background:#f5f4f4;
+	background-position: top left;
+	background-repeat:no-repeat;
+	height:16px;
+	vertical-align:middle;
+}
+
+div#mainCenterPoll02 {
+	padding: 0.5em 0.5em 0 0;
+	margin: 0 0.5em 1em 0.5em;
+	text-align:right;
+	background:#f5f4f4;
+	background-position: top left;
+	background-repeat:no-repeat;
+	height:16px;
+	vertical-align:middle;
+}
+
+div#mainCenterPoll03{
+	padding: 0.5em 0.5em 0 0;
+	margin: 0;
+	text-align:right;
+	background:#f5f4f4;
+	background-position: top left;
+	background-repeat:no-repeat;
+	height:16px;
+	vertical-align:middle;
+}
+
+div#mainCS div#mainCenterPoll02 {
+	margin: 0 0 1em 0;
+}
+
+
+div#mainCenterContext{
+	padding: 0.5em 1em 1em 1.5em;
+	overflow: hidden; /* NEW to fix IE Italics Float Bug */
+}
+
+#mainCenterContext .mainCenterContextTabella {
+	margin-bottom:1.8em;
+	border:1px solid white;
+	width:99%;
+}
+#mainCenterContext .mainCenterContextTabellaRic {
+	margin-bottom:1em;
+	border:1px solid white;
+	width:99%;
+}
+
+#mainCenterContext .mainCenterContextTabellaSearch {
+	margin-bottom:1.8em;
+	border:1px solid white;
+}
+
+
+#mainCenterContext .mainCenterContextTabella p {
+	margin:0;
+	padding:0;
+}
+
+div#mainPrint {
+	background:#fff;
+	/*background-position: top left;
+	background-repeat:no-repeat;*/
+	margin-top:0.5em;
+}
+
+
+div#mainCenterGoTop{
+	padding: 0.5em 0.5em 0 0.3em;
+	margin-left:0.5em;
+	background:#f5f4f4;
+	background-position: bottom right;
+	background-repeat:no-repeat;
+	height:16px;
+	vertical-align:middle;
+}
+
+div#mainCenterGoTop02{
+	padding: 0.5em 0.5em 0 0.3em;
+	margin-left:0.5em;
+	margin-right:0.5em;
+	background:#f5f4f4;
+	background-position: bottom right;
+	background-repeat:no-repeat;
+	height:16px;
+	vertical-align:middle;
+}
+
+div#mainCS div#mainCenterGoTop02{
+	margin-left:0;
+	margin-right:0;
+}
+
+div#mainCenterGoTop03{
+	padding: 0.5em 0.5em 0 0.3em;
+	background:#f5f4f4;
+	height:16px;
+	vertical-align:middle;
+}
+
+
+div#mainCenterGoTopContext{
+	height:24px;
+	background-position: bottom right;
+	background-repeat:no-repeat;
+}
+
+
+
+/********* body in contextBox *********/
+div.bodyBox{
+	padding-bottom:0.3em;
+	line-height:1.8em;
+}
+
+div.bodyBox p{
+	padding-top:0;
+	margin-top:0;
+}
+
+div.bodyBox table {
+	border-collapse:collapse;
+	margin-bottom:1em;
+}
+
+/********* associazioni, sorelle in contextBox *********/
+div.listBox, div.listBoxDoc {
+	padding:0.5em 0 1em 0;
+}
+
+.docs_style {
+	display:block;
+	padding-top:0.5em;
+	color: #000;
+	font-weight:normal;
+}
+
+/********* div for imgs and caption when there's MORE than one image *********/
+div.imgCaption {
+	float:left; 
+	padding-bottom:0.5em;
+	margin-top:0.5em; 
+	margin-right:1em; 
+	font-size:xx-small; /* IE 5.x only uses the first font-size declaration */
+	voice-family: "\"}\""; /* box model hack by Tantek: IE 5.x stops here due to a CSS parsing bug */
+	voice-family: inherit;
+	font-size:x-small; /* All conforming CSS user agents will see and use the second font-size declaration */
+}
+
+div.imgCaption p{
+	margin-top:0;
+	height:4em; /* in order to make paragraphs the same height when there's a long caption*/
+}
+
+/********* div for imgs and caption when there's just ONE image *********/
+div.imgCaptionOne {
+	/*float:left;*/
+	/*padding-bottom:0.5em;*/ /* commentato per caption on the right */
+	margin-right:1em; /* NEW for caption on the right: it was 2em */
+	margin-bottom:0.5em;
+	vertical-align:text-bottom;/* NEW for caption at the bottom */
+	font-size:xx-small; /* IE 5.x only uses the first font-size declaration */
+	voice-family: "\"}\""; /* box model hack by Tantek: IE 5.x stops here due to a CSS parsing bug */
+	voice-family: inherit;
+	font-size:x-small; /* All conforming CSS user agents will see and use the second font-size declaration */
+}
+
+div.imgCaptionOne p{
+	margin-top:0;
+}
+
+div.imgCaptionRight {
+	font-size:xx-small; /* IE 5.x only uses the first font-size declaration */
+	voice-family: "\"}\""; /* box model hack by Tantek: IE 5.x stops here due to a CSS parsing bug */
+	voice-family: inherit;
+	font-size:x-small; /* All conforming CSS user agents will see and use the second font-size declaration */
+}
+
+/********* schede in contextBox *********/
+div.schemaBox {
+	padding:0.5em 0;
+	width:100%;
+}
+
+.bg_table {}
+
+.bg_tr {background:#ccc;}
+
+th.bg_scheda {
+	font-weight:normal;
+	text-align:left;
+	border-bottom:1px solid #ccc;
+	padding: 0.4em 0.4em 0.4em 0;
+	font-size:78%; /* IE 5.x only uses the first font-size declaration */
+	voice-family: "\"}\""; /* box model hack by Tantek: IE 5.x stops here due to a CSS parsing bug */
+	voice-family: inherit;
+	font-size:100%; /* All conforming CSS user agents will see and use the second font-size declaration */
+}
+
+td.bg_scheda {
+	border-bottom:1px solid #ccc;
+	padding: 0.4em 0.4em 0.4em 0;
+	font-size:78%; /* IE 5.x only uses the first font-size declaration */
+	voice-family: "\"}\""; /* box model hack by Tantek: IE 5.x stops here due to a CSS parsing bug */
+	voice-family: inherit;
+	font-size:100%; /* All conforming CSS user agents will see and use the second font-size declaration */
+}
+
+td.bg_line {
+	border-bottom:1px solid #ccc;
+}
+
+div.schemaBox2 p {
+	margin:0;
+	padding:0;
+}
+
+/********* spacer bottom *********/
+p.spacer {
+	padding-bottom:5em;
+}
+
+/********* WIP in contextBox *********/
+div#wipBox{
+	padding:0 0 30em 0;
+}
+
+.mainCenterMenuEach{
+	padding:0 1em 1em 1.4em;
+}
+
+/********* table in contextBox *********/
+div#contextBox table {
+	border-collapse:collapse;
+	border: 1px solid #a9a9a9;
+	font-size:100%; /* for IE 5.x */
+}
+
+div#contextBox th  {
+	background:#dfe8f8;
+	border-collapse:collapse;
+	border: 1px solid #a9a9a9;
+	color:#062972;
+	padding:0.3em;
+}
+
+div#contextBox td  {
+	border-collapse:collapse;
+	border: 1px solid #a9a9a9;
+	background: transparent;
+	padding:0.3em;
+}
+
+
+/********* context comunicati stampa *********/
+div.contextCS {
+	
+}
+
+div.widthSmaller {
+	width:92%;
+}
+
+
+
+/* MAIN - RIGHT 
+-------------------- */
+div.mainRightSisters {
+	padding-top:1.8em;
+	border-top:1px solid #d7d7d7;
+	border-right:1px solid #d7d7d7;
+	border-left:1px solid #d7d7d7;
+	background:#f5f4f4;
+}
+div.mainRightSistersInside {
+	background:white;
+	padding-top:0.8em;
+	border-bottom:1px solid #d7d7d7;
+}
+
+
+
+/* MAIN - BIG 
+-------------------- */
+
+
+
+/* MAP
+-------------------- */
+
+div#map {
+
+}
+
+#map div.mapLeft {
+	width:45%;
+	float:left;
+	margin-right:2em;
+	padding-top:1em;
+}
+
+#map div.mapLeft02 {
+	float:left;
+	margin-right:2em;
+	padding-top:1em;
+}
+
+#map fieldset {
+	display: block;
+	border: 1px solid #a9a9a9;
+	padding:0.8em;
+	margin: 0 0 0.5em 0;
+}
+
+#map fieldset legend {
+	font-weight:bold;
+	text-transform:uppercase;
+}
+
+
+/* MAP - HOME
+-------------------- */
+/********* different for each section *********/
+
+#map .mapHome fieldset legend
+{
+	color:#e60000;
+}
+
+#map .mapHome fieldset legend a:link,#map .mapHome fieldset legend a:active,#map .mapHome fieldset legend a:visited ,#map .mapHome fieldset legend a:hover {
+	color:#e60000;
+}
+
+#map .mapHome ul { 
+	color:#e60000;
+}
+
+#map .mapHome ul li.titleMenu a{
+	color:#e60000;
+}
+
+#map .mapHome ul li a:hover{ 
+	color:#e60000;
+}
+
+
+/* MAP - AMBIENTE
+-------------------- */
+/********* different for each section *********/
+
+#map .mapAmbiente fieldset legend {
+	color:#326e00;
+}
+
+#map .mapAmbiente fieldset legend a:link,#map .mapAmbiente fieldset legend a:active,#map .mapAmbiente fieldset legend a:visited ,#map .mapAmbiente fieldset legend a:hover {
+	color:#326e00;
+}
+
+#map .mapAmbiente ul { 
+	color:#326e00;
+}
+
+#map .mapAmbiente ul li.titleMenu a{
+	color:#326e00;
+}
+
+#map .mapAmbiente ul li a:hover{ 
+	color:#326e00;
+}
+
+
+/* MAP - CULTURA
+-------------------- */
+/********* different for each section *********/
+
+#map .mapCultura fieldset legend {
+	color:#b40f00;
+}
+
+#map .mapCultura fieldset legend a:link,#map .mapCultura fieldset legend a:active,#map .mapCultura fieldset legend a:visited ,#map .mapCultura fieldset legend a:hover {
+	color:#b40f00;
+}
+
+#map .mapCultura ul { 
+	color:#b40f00;
+}
+
+#map .mapCultura ul li.titleMenu a{
+	color:#b40f00;
+}
+
+#map .mapCultura ul li a:hover{ 
+	color:#b40f00;
+}
+
+
+/* MAP - GIOVANI
+-------------------- */
+/********* different for each section *********/
+
+#map .mapGiovani fieldset legend {
+	color:#6E0A64;
+}
+
+#map .mapGiovani fieldset legend a:link,#map .mapGiovani fieldset legend a:active,#map .mapGiovani fieldset legend a:visited ,#map .mapGiovani fieldset legend a:hover {
+	color:#6E0A64;
+}
+
+#map .mapGiovani ul { 
+	color:#6E0A64;
+}
+
+#map .mapGiovani ul li.titleMenu a{
+	color:#6E0A64;
+}
+
+#map .mapGiovani ul li a:hover{ 
+	color:#6E0A64;
+}
+
+
+/* MAP - LAVORI
+-------------------- */
+/********* different for each section *********/
+
+#map .mapLavori fieldset legend {
+	color:#a00046;
+}
+
+#map .mapLavori fieldset legend a:link,#map .mapLavori fieldset legend a:active,#map .mapLavori fieldset legend a:visited ,#map .mapLavori fieldset legend a:hover {
+	color:#a00046;
+}
+
+#map .mapLavori ul { 
+	color:#a00046;
+}
+
+#map .mapLavori ul li.titleMenu a{
+	color:#a00046;
+}
+
+#map .mapLavori ul li a:hover{ 
+	color:#a00046;
+}
+
+
+/* MAP - SERVIZI
+-------------------- */
+/********* different for each section *********/
+
+#map .mapServizi fieldset legend {
+	color:#0014be;
+}
+
+#map .mapServizi fieldset legend a:link,#map .mapServizi fieldset legend a:active,#map .mapServizi fieldset legend a:visited ,#map .mapServizi fieldset legend a:hover {
+	color:#0014be;
+}
+
+#map .mapServizi ul { 
+	color:#0014be;
+}
+
+#map .mapServizi ul li.titleMenu a{
+	color:#0014be;
+}
+
+#map .mapServizi ul li a:hover{ 
+	color:#0014be;
+}
+
+
+/* MAP - URBANISTICA
+-------------------- */
+/********* different for each section *********/
+
+#map .mapUrbanistica fieldset legend {
+	color:#00646e;
+}
+
+#map .mapUrbanistica fieldset legend a:link,#map .mapUrbanistica fieldset legend a:active,#map .mapUrbanistica fieldset legend a:visited ,#map .mapUrbanistica fieldset legend a:hover {
+	color:#00646e;
+}
+
+#map .mapUrbanistica ul { 
+	color:#00646e;
+}
+
+#map .mapUrbanistica ul li.titleMenu a{
+	color:#00646e;
+}
+
+#map .mapUrbanistica ul li a:hover{ 
+	color:#00646e;
+}
+
+
+/* MAP - VIVERE
+-------------------- */
+/********* different for each section *********/
+
+#map .mapVivere fieldset legend {
+	color:#6e5f00;
+}
+
+#map .mapVivere fieldset legend a:link,#map .mapVivere fieldset legend a:active,#map .mapVivere fieldset legend a:visited ,#map .mapVivere fieldset legend a:hover {
+	color:#6e5f00;
+}
+
+#map .mapVivere ul { 
+	color:#6e5f00;
+}
+
+#map .mapVivere ul li.titleMenu a{
+	color:#6e5f00;
+}
+
+#map .mapVivere ul li a:hover{ 
+	color:#6e5f00;
+}
+
+
+/* MAIN - RIGHT
+-------------------- */
+div#mainRight {
+	float:left;
+	width:auto; /* IE 5.x only uses the first width declaration */
+	voice-family: "\"}\""; /* box model hack by Tantek: IE 5.x stops here due to a CSS parsing bug */
+	voice-family: inherit;
+	width:22%; /* All conforming CSS user agents will see and use the second width declaration */
+}
+
+html>body div#mainRight {
+  width:22%; /* be nice to Opera 5 by Tantek */
+} 
+
+div.mainRightBanner {
+	padding:0.5em;
+	border-bottom:0.5em solid #fff;
+	background:#f5f4f4;
+	text-align:center;
+}
+
+div#mainRightMenu {
+	font-weight:normal;
+}
+
+div.mainRightMenuEach {
+	padding:0.5em;
+	margin-bottom:0.5em;
+	background:#f5f4f4;
+}
+
+.mainRightMenuEach02{
+	padding:0 2em;
+}
+
+/* FOOTER
+-------------------------- */
+div#footer {
+	text-align: left;
+	background:#fff;
+	border-top:0.5em solid #fff;
+}
+
+div#footerPath {
+	text-align: left;
+	padding:0.3em;
+	background:#f5f4f4;
+}
+
+div#footerCredits{
+	text-align: left;
+	padding:0.3em;
+	color:#fff;
+}
+
+
+
+
+/* WELCOME PAGE
+-------------------------- */
+
+div#welcome{
+	margin:0 auto;
+	padding-top:4em;
+	width:740px; 
+}
+
+#welcome .t {background: url(/images/borderTop.gif) 0 0 repeat-x #fff; width: 100%;}
+#welcome .b {background: url(/images/borderBottom.gif) 0 100% repeat-x;}
+#welcome .l {background: url(/images/borderLeft.gif) 0 0 repeat-y;}
+#welcome .r {background: url(/images/borderRight.gif) 100% 0 repeat-y;}
+#welcome .bl {background: url(/images/mainCornerBottomLeft.gif) 0 100% no-repeat;}
+#welcome .br {background: url(/images/mainCornerBottomRight.gif) 100% 100% no-repeat;}
+#welcome .tl {background: url(/images/mainCornerTopLeft.gif) 0 0 no-repeat;}
+#welcome .tr {background: url(/images/mainCornerTopRight.gif) 100% 0 no-repeat; padding:2px;}
+
+div#welcomeTop {
+	padding:2em 2em 8em 2em;
+}
+
+div#welcomeLanguage {
+	float:right;
+}
+
+div#skyline {
+	padding-bottom:2.5em;
+}
