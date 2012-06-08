@@ -103,7 +103,10 @@ class BauakteController extends BaseController {
                 
                 if (params.pm)
                     restriction += " AND par.materielleanteil = '${params.pm.toUpperCase().replaceAll('\'', '')}'"
-					   				
+
+                if (params.sub)
+                    restriction += " AND par.baueinheit = '${params.sub.toUpperCase().replaceAll('\'', '')}'"
+
                 restriction += ")"
 			
                 sqlRestriction restriction			

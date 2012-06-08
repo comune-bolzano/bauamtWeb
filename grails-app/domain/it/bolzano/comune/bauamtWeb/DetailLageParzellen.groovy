@@ -23,8 +23,9 @@ class DetailLageParzellen {
     String parztypDe
     String parztypIt
     String nummer
-    String materielleanteil
+    String materielleanteil    
     String einlagezahl
+    String baueinheit
     Long baId
     Long katastalgemId
 

@@ -153,6 +153,10 @@
 							    PM 
 							    <g:fieldValue bean="${d}" field="materielleanteil" />
 							  </g:if>  								  
+							  <g:if test="${d.baueinheit}">
+							    <g:message code="sub.label" default="Sub" />
+							    <g:fieldValue bean="${d}" field="baueinheit" />
+							  </g:if>  								  
 							</span>
 						</g:each>
 					

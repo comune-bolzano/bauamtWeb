@@ -13,10 +13,12 @@ $(document).ready(function()
 			   $('#pf').removeAttr("disabled");
 			   $('#ped').removeAttr("disabled");
 			   $('#pm').removeAttr("disabled");
+                           $('#sub').removeAttr("disabled");
 			} else {
 			   $('#pf').attr("disabled", true);
 			   $('#ped').attr("disabled", true);
 			   $('#pm').attr("disabled", true);
+                           $('#sub').attr("disabled", true);
 			}
 		   });
 	            
@@ -95,6 +97,8 @@ $(document).ready(function()
 	<g:textField disabled="${!params.comuneCatastale ? 'true' :'false'}" name="ped" size="5" maxlength="10" value="${params.ped}" />
 	<g:message code="pm.label" default="Ped" />
 	<g:textField disabled="${!params.comuneCatastale ? 'true' :'false'}" name="pm" size="5" maxlength="10" value="${params.pm}" />
+	<g:message code="sub.label" default="Sub" />
+	<g:textField disabled="${!params.comuneCatastale ? 'true' :'false'}" name="sub" size="5" maxlength="10" value="${params.sub}" />
 </div>
 <div class="fieldcontain">
 	<label for="cognomeRichiedente"> <g:message code="detailPers.richiedente.label" default="Richiedente" />
