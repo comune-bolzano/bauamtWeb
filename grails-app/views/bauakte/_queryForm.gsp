@@ -101,13 +101,13 @@ $(document).ready(function()
 	</label>
 	<g:textField name="cognomeRichiedente" maxlength="50" value="${params.cognomeRichiedente}" />
 	<g:message code="detailPers.richiedenteNome.label" default="Nome"/> 
-	<g:textField disabled="${!params.cognome ? 'true' :'false'}" name="nomeRichiedente" maxlength="50" value="${params.nomeRichiedente}" />
+	<g:textField disabled="${!params.cognomeRichiedente ? 'true' :'false'}" name="nomeRichiedente" maxlength="50" value="${params.nomeRichiedente}" />
 </div>
 <div class="fieldcontain">
 	<label for="cognomeProgettista"> <g:message code="detailPers.progettista.label" default="Progettista" />
 	</label>
 	<g:textField name="cognomeProgettista" maxlength="50" value="${params.cognomeProgettista}" />
 	<g:message code="detailPers.progettistaNome.label" default="Nome"/>
-	<g:textField disabled="${!params.cognome ? 'true' :'false'}" name="nomeProgettista" maxlength="50" value="${params.nomeProgettista}" />
+	<g:textField disabled="${!params.cognomeProgettista ? 'true' :'false'}" name="nomeProgettista" maxlength="50" value="${params.nomeProgettista}" />
 </div>
 
