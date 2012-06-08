@@ -1,4 +1,4 @@
 bauamtWeb
 =========
 
-Consultazione pratiche edilizie online ttt
+Consultazione pratiche edilizie online
