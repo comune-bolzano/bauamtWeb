@@ -13,7 +13,7 @@ class BauakteController extends BaseController {
     }
 	
     protected def doList(params) {
-        if (!params.tipoPratica && !params.tipoOpera && !params.baNummer && !params.archivnr &&
+        if (!params.tipoPratica && !params.baNummer && !params.archivnr &&
             !params.daDataPresentazione && !params.aDataPresentazione && 
             !params.daDataDeterminazione && !params.aDataDeterminazione &&
             !params.sedeOpera &&
@@ -26,9 +26,6 @@ class BauakteController extends BaseController {
         Bauakte.createCriteria().list(max:params.max, offset:params.offset) {
             if (params.tipoPratica && params.tipoPratica.isNumber())
                 eq("verwaltungsaktId", new Long(params.tipoPratica))
-			
-            if (params.tipoOpera && params.tipoOpera.isNumber())
-                eq("artId", new Long(params.tipoOpera))
 			
             if (params.baNummer)
                 eq("baNummer", params.baNummer)
@@ -69,8 +66,8 @@ class BauakteController extends BaseController {
                 def restriction = "exists (select id from detail_Indirizzo ind where ind.ba_id = {alias}.ba_id AND ind.cviacodi = $params.sedeOpera"
                 if (params.civico && params.civico.isInteger())
                     restriction += " AND ind.ncivnume = $params.civico"
-                if (params.barra && params.barra.isNumber())
-                    restriction += " AND ind.ncivbarr = '${params.barra}'".toString()
+                if (params.barra && !params.civico.isNumber())
+                    restriction += " AND ind.ncivbarr = '${params.barra.toUpperCase().replaceAll('\'', '')}'"
                 restriction += ")"
 				   
                 sqlRestriction restriction 			
@@ -95,11 +92,8 @@ class BauakteController extends BaseController {
                 }
                  */
 				
-                if (params.pf)
-                    restriction += " AND par.parztyp_id = 2 AND par.nummer = '${params.pf.toUpperCase().replaceAll('\'', '')}'"
-				
-                if (params.ped)
-                    restriction += " AND par.parztyp_id = 1 AND par.nummer = '${params.ped.toUpperCase().replaceAll('\'', '')}'"
+                if (params.tipoParticella && params.tipoParticella.isNumber() && params.numParticella)
+                    restriction += " AND par.parztyp_id = ${params.tipoParticella} AND par.nummer = '${params.numParticella.toUpperCase().replaceAll('\'', '')}'"
                 
                 if (params.pm)
                     restriction += " AND par.materielleanteil = '${params.pm.toUpperCase().replaceAll('\'', '')}'"
@@ -113,13 +107,13 @@ class BauakteController extends BaseController {
             }
 			
             if (params.cognomeRichiedente) {
-                def cognome = params.cognomeRichiedente.toUpperCase().replaceAll('\'', '')+"%"
+                def cognome = params.cognomeRichiedente.toUpperCase().replaceAll('\'', '')
                 def restriction = "exists (select id from detail_pers per where per.kennung_id = 1 AND per.ba_id = {alias}.ba_id AND "+
-                                  "(per.familienname like '${cognome}' OR "+
-                                  "per.firmenbezeichnung_de like '${cognome}' OR "+
-                                  "per.firmenbezeichnung_it like '${cognome}')"
+                                  "(per.familienname = '${cognome}' OR "+
+                                  "UPPER(per.firmenbezeichnung_de) like '${cognome+"%"}' OR "+
+                                  "UPPER(per.firmenbezeichnung_it) like '${cognome+"%"}')"
                 if (params.nomeRichiedente)
-                    restriction += " AND per.vorname like '${params.nomeRichiedente.toUpperCase().replaceAll('\'', '')}'"
+                    restriction += " AND per.vorname = '${params.nomeRichiedente.toUpperCase().replaceAll('\'', '')}'"
                 restriction += ")".toString()
 				
                 sqlRestriction restriction
@@ -135,14 +129,14 @@ class BauakteController extends BaseController {
             }
 			  
             if (params.cognomeProgettista) {
-                def cognome = params.cognomeProgettista.toUpperCase().replaceAll('\'', '')+"%"
+                def cognome = params.cognomeProgettista.toUpperCase().replaceAll('\'', '')
                 def restriction = "exists (select id from detail_pers per where per.kennung_id = 3 AND per.ba_id = {alias}.ba_id AND "+
-                                  "(per.familienname like '${cognome}' OR "+
-                                  "per.firmenbezeichnung_de like '${cognome}' OR "+
-                                  "per.firmenbezeichnung_it like '${cognome}')"
+                                  "(per.familienname = '${cognome}' OR "+
+                                  "UPPER(per.firmenbezeichnung_de) like '${cognome+"%"}' OR "+
+                                  "UPPER(per.firmenbezeichnung_it) like '${cognome+"%"}')"
                                 
                 if (params.nomeProgettista)
-                   restriction += " AND per.vorname like '${params.nomeProgettista.toUpperCase().replaceAll('\'', '')}'"
+                   restriction += " AND per.vorname = '${params.nomeProgettista.toUpperCase().replaceAll('\'', '')}'"
                 restriction += ")".toString()
 				
                 sqlRestriction restriction

@@ -14,7 +14,7 @@ class Vie {
          id column: 'CVIACODI'
     }
     String descrIt
-	String descrDe
+    String descrDe
 
     static constraints = {
 	id()
