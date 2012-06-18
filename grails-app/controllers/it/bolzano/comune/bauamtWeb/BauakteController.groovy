@@ -13,7 +13,7 @@ class BauakteController extends BaseController {
     }
 	
     protected def doList(params) {
-        if (!params.tipoPratica && !params.baNummer && !params.archivnr &&
+        if (!params.tipoPratica && !params.baNummer && !params.baJahr && !params.archivnr &&
             !params.daDataPresentazione && !params.aDataPresentazione && 
             !params.daDataDeterminazione && !params.aDataDeterminazione &&
             !params.sedeOpera &&
@@ -27,8 +27,11 @@ class BauakteController extends BaseController {
             if (params.tipoPratica && params.tipoPratica.isNumber())
                 eq("verwaltungsaktId", new Long(params.tipoPratica))
 			
-            if (params.baNummer)
-                eq("baNummer", params.baNummer)
+            if (params.baNummer && params.baNummer.isNumber())
+                eq("nummer", new Long(params.baNummer))
+                
+            if (params.baJahr && params.baJahr.isNumber())
+                eq("jahr", new Long(params.baJahr))
 
             if (params.archivnr)
                 eq("archivnr", params.archivnr)
