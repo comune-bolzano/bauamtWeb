@@ -54,6 +54,7 @@ $(document).ready(function()
 	<label for="baNummer"> <g:message code="bauakte.baNummer.label" default="Numero/anno pratica" />
 	</label>
 	<g:textField name="baNummer" maxlength="10" value="${params.baNummer}" />
+        <g:message code="bauakte.baJahr.label" default="Anno" />
         <g:textField name="baJahr" size="4"  maxlength="4" value="${params.baJahr}" />        
 </div>
 <div class="fieldcontain">
