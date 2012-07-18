@@ -112,11 +112,11 @@ class BauakteController extends BaseController {
             if (params.cognomeRichiedente) {
                 def cognome = params.cognomeRichiedente.toUpperCase().replaceAll('\'', '')
                 def restriction = "exists (select id from detail_pers per where per.kennung_id = 1 AND per.ba_id = {alias}.ba_id AND "+
-                                  "(per.familienname = '${cognome}' OR "+
+                                  "(UPPER(per.familienname) = '${cognome}' OR "+
                                   "UPPER(per.firmenbezeichnung_de) like '${cognome+"%"}' OR "+
                                   "UPPER(per.firmenbezeichnung_it) like '${cognome+"%"}')"
                 if (params.nomeRichiedente)
-                    restriction += " AND per.vorname = '${params.nomeRichiedente.toUpperCase().replaceAll('\'', '')}'"
+                    restriction += " AND UPPER(per.vorname) = '${params.nomeRichiedente.toUpperCase().replaceAll('\'', '')}'"
                 restriction += ")".toString()
 				
                 sqlRestriction restriction
@@ -134,12 +134,12 @@ class BauakteController extends BaseController {
             if (params.cognomeProgettista) {
                 def cognome = params.cognomeProgettista.toUpperCase().replaceAll('\'', '')
                 def restriction = "exists (select id from detail_pers per where per.kennung_id = 3 AND per.ba_id = {alias}.ba_id AND "+
-                                  "(per.familienname = '${cognome}' OR "+
+                                  "(UPPER(per.familienname) = '${cognome}' OR "+
                                   "UPPER(per.firmenbezeichnung_de) like '${cognome+"%"}' OR "+
                                   "UPPER(per.firmenbezeichnung_it) like '${cognome+"%"}')"
                                 
                 if (params.nomeProgettista)
-                   restriction += " AND per.vorname = '${params.nomeProgettista.toUpperCase().replaceAll('\'', '')}'"
+                   restriction += " AND UPPER(per.vorname) = '${params.nomeProgettista.toUpperCase().replaceAll('\'', '')}'"
                 restriction += ")".toString()
 				
                 sqlRestriction restriction
